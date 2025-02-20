@@ -1,0 +1,13 @@
+name: demo-environment
+channels:
+  - conda-forge
+dependencies:
+  - python==3.11.11
+  - numpy
+  - matplotlib
+  - pandas==1.5.3
+  - xarray
+  - netcdf4
+  - cartopy
+  - rioxarray
+  - pycaret==2.0
