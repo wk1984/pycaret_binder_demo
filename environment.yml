@@ -11,4 +11,4 @@ dependencies:
   - cartopy
   - rioxarray
   - pycaret
-  - mlflow
+  - mlflow==2.16.0
