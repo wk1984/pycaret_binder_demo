@@ -32,4 +32,4 @@ RUN . /root/.bashrc \
     && conda install -c conda-forge mamba -y
 
 RUN . /root/.bashrc \
-    && mamba install -c conda-forge jupyterlab jupyter notebook cartopy numpy pandas==1.5.3 scipy shap matplotlib xarray seaborn rioxarray pycaret mlflow==2.16.0 -y
+    && mamba install -c conda-forge cartopy numpy pandas==1.5.3 scipy shap matplotlib xarray seaborn rioxarray pycaret mlflow==2.16.0 -y
