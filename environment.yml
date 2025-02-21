@@ -7,6 +7,8 @@ dependencies:
   - matplotlib
   - pandas==1.5.3
   - xarray
+  - seaborn
+  - scipy
   - netcdf4
   - cartopy
   - rioxarray
