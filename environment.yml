@@ -11,3 +11,4 @@ dependencies:
   - cartopy
   - rioxarray
   - pycaret==2.0
+  - protobuf==3.20
