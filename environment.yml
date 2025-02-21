@@ -10,5 +10,4 @@ dependencies:
   - netcdf4
   - cartopy
   - rioxarray
-  - pycaret==2.0
-  - protobuf==3.20
+  - pycaret
