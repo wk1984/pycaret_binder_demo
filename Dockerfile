@@ -19,11 +19,11 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py311_25.1.1-2-L
     && ln -s /opt/miniforge/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/miniforge/etc/profile.d/conda.sh" >> ~/.bashrc
 
-ENV PATH /opt/miniforge/bin:${PATH}
-ARG PATH /opt/miniforge/bin:${PATH}
-ENV HDF5_DIR /opt/miniforge/
-ENV NETCDF4_DIR /opt/miniforge/ 
-ENV SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL True
+ENV PATH=/opt/miniforge/bin:${PATH}
+ARG PATH=/opt/miniforge/bin:${PATH}
+ENV HDF5_DIR=/opt/miniforge/
+ENV NETCDF4_DIR=/opt/miniforge/ 
+ENV SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
 RUN . /root/.bashrc \
     && /opt/miniforge/bin/conda init bash \
@@ -33,3 +33,6 @@ RUN . /root/.bashrc \
 
 RUN . /root/.bashrc \
     && mamba install -c conda-forge cartopy numpy pandas==1.5.3 scipy shap matplotlib xarray seaborn rioxarray pycaret mlflow==2.16.0 -y
+    
+RUN . /root/.bashrc \
+    pip install --no-cache notebook jupyterlab
